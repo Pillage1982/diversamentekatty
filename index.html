@@ -1,0 +1,1367 @@
+﻿<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diversamente Katty | Psicopedagogía Clínica</title>
+  <meta name="description" content="Psicopedagogía Clínica a domicilio: evaluación, intervención y orientación familiar para acompañar el aprendizaje de niños y niñas.">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png">
+  <style>
+    :root {
+      --ink: #241b32;
+      --muted: #5f5870;
+      --purple: #8f62d6;
+      --purple-deep: #6944aa;
+      --lavender: #f2effd;
+      --mint: #dff5ed;
+      --teal: #3d9b87;
+      --sun: #ffe7a8;
+      --coral: #f17372;
+      --white: #ffffff;
+      --line: #e8e1f5;
+      --shadow: 0 18px 50px rgba(59, 39, 101, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fffdfa;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .mobile-menu-toggle,
+    .mobile-menu-close {
+      display: none;
+    }
+
+    .nav {
+      width: min(1120px, calc(100% - 32px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--purple-deep);
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--lavender);
+    }
+
+    .logo-mark {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 34% 34%, #fff 0 4px, transparent 5px),
+        linear-gradient(135deg, #8f62d6, #3d9b87);
+      color: #fff;
+      border: 3px solid var(--lavender);
+      font-size: 1.45rem;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(105, 68, 170, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: var(--lavender);
+      color: var(--purple-deep);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--purple-deep);
+      color: var(--white);
+      font-weight: 800;
+      box-shadow: 0 12px 28px rgba(105, 68, 170, 0.22);
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--purple-deep);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(36, 27, 50, 0.78), rgba(105, 68, 170, 0.46), rgba(255, 255, 255, 0.18)),
+        url("assets/wordpress-recuperado/banner-diversamente-katty.jpeg") center / cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 70px 0 92px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      max-width: 790px;
+      margin: 0;
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 24px 0 0;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 38px;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .hero-note span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    section {
+      padding: 84px 0;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .intro {
+      background: linear-gradient(180deg, #fffdfa 0%, var(--lavender) 100%);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .portrait {
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+
+    .portrait img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .quote {
+      margin: 24px 0 0;
+      padding: 22px;
+      border-left: 6px solid var(--coral);
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(59, 39, 101, 0.08);
+      font-weight: 800;
+      color: var(--purple-deep);
+    }
+
+    .services {
+      background: #fff;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      min-height: 270px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(59, 39, 101, 0.06);
+    }
+
+    .service:nth-child(2) {
+      background: var(--mint);
+    }
+
+    .service:nth-child(4) {
+      background: var(--sun);
+    }
+
+    .service-icon {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--lavender), #fff);
+      color: var(--purple-deep);
+      font-size: 1.45rem;
+      font-weight: 900;
+      border: 1px solid var(--line);
+    }
+
+    img.service-icon {
+      object-fit: cover;
+      padding: 0;
+    }
+
+    .service h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      line-height: 1.25;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .process {
+      background: var(--lavender);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      min-height: 210px;
+      padding: 64px 22px 22px;
+      border-radius: 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      top: 20px;
+      left: 22px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--purple);
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .family {
+      background: #fffdfa;
+    }
+
+    .family-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .family-panel {
+      padding: 34px;
+      border-radius: 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .family-panel ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .family-panel li {
+      padding-left: 28px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .family-panel li::before {
+      content: "";
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .moments {
+      background: linear-gradient(180deg, #fffdfa 0%, #f7fbf8 100%);
+    }
+
+    .moment-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .moment {
+      position: relative;
+      min-height: 250px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--lavender);
+      box-shadow: 0 12px 34px rgba(59, 39, 101, 0.1);
+    }
+
+    .moment:first-child {
+      grid-row: span 2;
+      min-height: 516px;
+    }
+
+    .moment img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .moment span {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      color: #fff;
+      background: rgba(36, 27, 50, 0.72);
+      font-weight: 800;
+    }
+
+    .contact {
+      color: var(--white);
+      background:
+        linear-gradient(120deg, rgba(36, 27, 50, 0.9), rgba(105, 68, 170, 0.9)),
+        url("assets/wordpress-recuperado/imagen-principal-diversamente-katty.jpeg") center / cover no-repeat;
+    }
+
+    .contact .section-head p {
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      font-weight: 800;
+      color: var(--purple-deep);
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: var(--ink);
+      background: #fff;
+      font: inherit;
+    }
+
+    .field textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .form-error {
+      display: none;
+      margin: 0;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff1f1;
+      color: #9f1d1d;
+      font-weight: 700;
+    }
+
+    .form-error.is-visible {
+      display: block;
+    }
+
+    .footer {
+      padding: 26px 0;
+      background: #1f172d;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .footer-copy {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer a {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .back-to-top-float,
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      z-index: 30;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(37, 211, 102, 0.35);
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .back-to-top-float {
+      left: 22px;
+      background: var(--purple-deep);
+      box-shadow: 0 16px 34px rgba(105, 68, 170, 0.32);
+    }
+
+    .whatsapp-float {
+      right: 22px;
+      background: #25d366;
+      box-shadow: 0 16px 34px rgba(37, 211, 102, 0.35);
+      display: none;
+    }
+
+    .back-to-top-float:hover,
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+    }
+
+    .back-to-top-float:hover {
+      box-shadow: 0 20px 42px rgba(105, 68, 170, 0.42);
+    }
+
+    .whatsapp-float:hover {
+      box-shadow: 0 20px 42px rgba(37, 211, 102, 0.42);
+    }
+
+    .back-to-top-float svg,
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .whatsapp-float svg {
+      fill: currentColor;
+    }
+
+    @media (max-width: 860px) {
+      .whatsapp-float {
+        display: grid;
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 12px 0;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      .nav-links a {
+        padding: 8px 9px;
+      }
+
+      .hero {
+        min-height: auto;
+        background-position: 58% center;
+      }
+
+      .hero-inner {
+        padding: 64px 0 70px;
+      }
+
+      .hero h1 {
+        max-width: 620px;
+      }
+
+      .intro-grid,
+      .family-grid,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .steps,
+      .moment-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .moment:first-child {
+        grid-row: auto;
+      }
+
+      .moment,
+      .moment:first-child {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-header {
+        position: fixed;
+        inset: 0 auto 0 0;
+        z-index: 45;
+        width: 75vw;
+        max-width: 330px;
+        min-width: 260px;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--line);
+        border-bottom: 0;
+        transform: translateX(-105%);
+        transition: transform 0.25s ease;
+        box-shadow: 18px 0 42px rgba(36, 27, 50, 0.18);
+      }
+
+      .site-header.is-open {
+        transform: translateX(0);
+      }
+
+      .mobile-menu-toggle {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 44;
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--purple-deep);
+        box-shadow: 0 10px 28px rgba(36, 27, 50, 0.14);
+      }
+
+      .mobile-menu-toggle span,
+      .mobile-menu-close span {
+        width: 22px;
+        height: 2px;
+        display: block;
+        background: currentColor;
+        border-radius: 999px;
+        position: relative;
+      }
+
+      .mobile-menu-toggle span::before,
+      .mobile-menu-toggle span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+      }
+
+      .mobile-menu-toggle span::before {
+        top: -7px;
+      }
+
+      .mobile-menu-toggle span::after {
+        top: 7px;
+      }
+
+      .mobile-menu-close {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        align-self: flex-end;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--lavender);
+        color: var(--purple-deep);
+      }
+
+      .mobile-menu-close span {
+        transform: rotate(45deg);
+      }
+
+      .mobile-menu-close span::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        background: currentColor;
+        transform: rotate(90deg);
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .nav {
+        width: calc(100% - 28px);
+        min-height: 100%;
+        padding: 18px 0 28px;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 18px;
+      }
+
+      .nav-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-top: 4px;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        border-radius: 12px;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.15;
+        font-size: 0.95rem;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .wrap,
+      .hero-inner,
+      .footer-inner {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .hero {
+        background:
+          linear-gradient(180deg, rgba(36, 27, 50, 0.84), rgba(105, 68, 170, 0.62), rgba(36, 27, 50, 0.38)),
+          url("assets/wordpress-recuperado/banner-diversamente-katty.jpeg") 56% center / cover no-repeat;
+      }
+
+      .hero-inner {
+        padding: 54px 0 58px;
+      }
+
+      .eyebrow {
+        margin-bottom: 14px;
+        padding: 7px 11px;
+        font-size: 0.86rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 14vw, 3.85rem);
+        line-height: 1.02;
+      }
+
+      .hero p {
+        margin-top: 18px;
+        font-size: 1rem;
+      }
+
+      .hero-actions,
+      .hero-note,
+      .contact-row {
+        gap: 10px;
+      }
+
+      .hero-note {
+        margin-top: 26px;
+      }
+
+      .hero-note span {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section-head {
+        margin-bottom: 26px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(1.75rem, 9vw, 2.35rem);
+      }
+
+      .section-head p,
+      .intro p,
+      .service p,
+      .step p,
+      .family-panel li {
+        font-size: 0.98rem;
+      }
+
+      .service-grid,
+      .steps,
+      .moment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service,
+      .step,
+      .family-panel {
+        border-radius: 18px;
+      }
+
+      .service {
+        min-height: auto;
+        padding: 22px;
+      }
+
+      .step {
+        min-height: auto;
+      }
+
+      .portrait {
+        border-radius: 18px;
+      }
+
+      .portrait img {
+        aspect-ratio: 1 / 1;
+      }
+
+      .quote {
+        padding: 18px;
+        border-radius: 16px;
+      }
+
+      .family-panel,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .moment,
+      .moment:first-child {
+        min-height: 240px;
+        border-radius: 18px;
+      }
+
+      .moment span {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 0.92rem;
+      }
+
+      .button {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 16px;
+        text-align: center;
+      }
+
+      .field input,
+      .field textarea {
+        font-size: 16px;
+      }
+
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .back-to-top-float,
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        width: 56px;
+        height: 56px;
+      }
+
+      .back-to-top-float {
+        left: 14px;
+        right: auto;
+      }
+
+      .back-to-top-float svg,
+      .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .service-icon {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="siteHeader" aria-expanded="false">
+    <span aria-hidden="true"></span>
+  </button>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav" aria-label="Menú principal">
+      <button class="mobile-menu-close" type="button" aria-label="Cerrar menú">
+        <span aria-hidden="true"></span>
+      </button>
+      <a class="brand" href="#inicio" aria-label="Diversamente Katty">
+        <img src="assets/brand/logo-diversamente-katty-mark-512.png" alt="Logo Diversamente Katty">
+        <span>Diversamente Katty</span>
+      </a>
+      <div class="nav-links">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#familias">Familias</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Inicio Diversamente Katty">
+      <div class="hero-inner">
+        <p class="eyebrow">Psicopedagogía Clínica a domicilio</p>
+        <h1>Diversamente Katty</h1>
+        <p>Transformamos el aprendizaje con amor, neurodidáctica y acompañamiento cercano para que cada niño y niña descubra su propia forma de aprender.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contacto">Agendar evaluación</a>
+          <a class="button secondary" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="hero-note" aria-label="Características principales">
+          <span>Evaluación psicopedagógica</span>
+          <span>Intervención personalizada</span>
+          <span>Orientación familiar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="nosotros">
+      <div class="wrap intro-grid">
+        <div class="portrait">
+          <img src="assets/wordpress-recuperado/imagen-principal-diversamente-katty.jpeg" alt="Imagen principal de Diversamente Katty">
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>Un espacio seguro para aprender distinto.</h2>
+            <p>En Diversamente Katty, el aprendizaje se mira desde la comprensión, la motivación y el respeto por la historia de cada familia. La atención es cercana, personalizada y pensada para niños y niñas que necesitan nuevas estrategias para avanzar con confianza.</p>
+          </div>
+          <p>El trabajo combina evaluación, intervención y acompañamiento a padres o cuidadores, para que las herramientas no se queden solo en la sesión: también puedan practicarse en el hogar y en la vida escolar.</p>
+          <div class="quote">“Cada cerebro aprende diferente; mi misión es ayudar a descubrir cómo.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Servicios psicopedagógicos</h2>
+          <p>Acompañamiento integral para comprender fortalezas, abordar dificultades y construir estrategias concretas de aprendizaje.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/icono-evaluacion-150.jpg" alt="">
+            <h3>Evaluación Psicopedagógica</h3>
+            <p>Permite conocer cómo aprende cada niño o niña, identificar fortalezas, necesidades y entregar orientaciones claras para la familia.</p>
+          </article>
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/icono-intervencion-150.jpg" alt="">
+            <h3>Intervención Personalizada</h3>
+            <p>Sesiones con estrategias lúdicas y neurodidácticas para fortalecer atención, memoria, lenguaje, lectoescritura y habilidades matemáticas.</p>
+          </article>
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/icono-funciones-150.jpg" alt="">
+            <h3>Funciones Ejecutivas</h3>
+            <p>Apoyo en planificación, organización, gestión del tiempo, técnicas de estudio y autonomía para enfrentar las tareas escolares.</p>
+          </article>
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/icono-domicilio-150.webp" alt="">
+            <h3>Atención a Domicilio</h3>
+            <p>Servicio particular adaptado a la realidad de cada familia, con una mirada cercana y práctica en el propio entorno del niño o niña.</p>
+          </article>
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/informes-familia.webp" alt="">
+            <h3>Orientación a Familias</h3>
+            <p>Herramientas para apoyar tareas escolares, motivación, hábitos de estudio, manejo emocional y acompañamiento cotidiano desde casa.</p>
+          </article>
+          <article class="service">
+            <img class="service-icon" src="assets/wordpress-recuperado/clases-ninos.jpg" alt="">
+            <h3>Talleres de Neuroeducación</h3>
+            <p>Instancias para padres, cuidadores y comunidad educativa, con estrategias basadas en neurociencias y aprendizaje respetuoso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Cómo se vive el proceso</h2>
+          <p>Una ruta simple ayuda a que la familia sepa qué esperar desde el primer contacto hasta el acompañamiento continuo.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Primer contacto</h3>
+            <p>La familia comparte sus inquietudes y se revisa qué tipo de apoyo necesita el niño o niña.</p>
+          </article>
+          <article class="step">
+            <h3>Evaluación</h3>
+            <p>Se observan habilidades, necesidades y formas de aprendizaje mediante actividades y estrategias específicas.</p>
+          </article>
+          <article class="step">
+            <h3>Plan personalizado</h3>
+            <p>Se definen objetivos y orientaciones para trabajar en sesiones, hogar y contexto escolar cuando corresponda.</p>
+          </article>
+          <article class="step">
+            <h3>Acompañamiento</h3>
+            <p>La intervención fortalece confianza, autonomía y herramientas concretas para aprender mejor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="family" id="familias">
+      <div class="wrap family-grid">
+        <div class="section-head">
+          <h2>Familia, escuela y aprendizaje trabajando juntos.</h2>
+          <p>El progreso se sostiene cuando las estrategias son comprensibles y aplicables en la vida diaria. Por eso el acompañamiento considera también a madres, padres y cuidadores.</p>
+        </div>
+        <div class="family-panel">
+          <strong>Se puede trabajar en:</strong>
+          <ul>
+            <li>Hábitos de estudio y organización de rutinas.</li>
+            <li>Apoyo en tareas escolares sin convertir la casa en una sala de clases.</li>
+            <li>Motivación, confianza y manejo emocional frente al aprendizaje.</li>
+            <li>Orientaciones prácticas para reforzar avances entre sesiones.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="moments" id="imagenes">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Aprendizaje con cercanía y propósito</h2>
+          <p>Recuperamos las imágenes originales del sitio para mantener la identidad visual de Diversamente Katty en la nueva versión estática.</p>
+        </div>
+        <div class="moment-grid">
+          <figure class="moment">
+            <img src="assets/wordpress-recuperado/psicologa-estudiante.jpg" alt="Acompañamiento psicopedagógico a estudiante">
+            <span>Acompañamiento cercano</span>
+          </figure>
+          <figure class="moment">
+            <img src="assets/wordpress-recuperado/evaluacion-psicopedagogica.jpg" alt="Evaluación psicopedagógica infantil">
+            <span>Evaluación psicopedagógica</span>
+          </figure>
+          <figure class="moment">
+            <img src="assets/wordpress-recuperado/intervencion-psicopedagogica.jpg" alt="Intervención psicopedagógica">
+            <span>Intervención personalizada</span>
+          </figure>
+          <figure class="moment">
+            <img src="assets/wordpress-recuperado/clases-ninos.jpg" alt="Clases y apoyo para niños">
+            <span>Estrategias para aprender</span>
+          </figure>
+          <figure class="moment">
+            <img src="assets/wordpress-recuperado/informes-familia.webp" alt="Informes y orientación a familias">
+            <span>Orientación a familias</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap">
+        <div class="contact-layout">
+          <div>
+            <div class="section-head">
+              <h2>Agenda una evaluación</h2>
+              <p>Si tu hijo o hija necesita apoyo para comprender cómo aprende, fortalecer habilidades o recuperar confianza, puedes escribir para coordinar una atención particular a domicilio.</p>
+            </div>
+            <div class="contact-row">
+              <a class="button secondary" href="https://www.instagram.com/diversamentekatty/">Instagram @diversamentekatty</a>
+              <a class="button secondary" href="https://www.facebook.com/share/17oixV6hbM/?mibextid=wwXIfr">Facebook Diversamente Katty</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/diversamentekatty@gmail.com" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="Nuevo contacto desde Diversamente Katty">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_autoresponse" value="Gracias por escribir a Diversamente Katty. Recibí tu mensaje y te responderé a la brevedad.">
+              <input type="hidden" name="_next" value="https://diversamentekatty.pillageweb.cl/">
+              <input type="hidden" id="formLoadedAt" name="Formulario cargado en" value="">
+              <input type="text" name="_honey" style="display:none">
+
+              <p class="form-error" id="formError" role="alert"></p>
+
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="Nombre" type="text" autocomplete="name" minlength="3" maxlength="80" pattern="[A-Za-zÀ-ÿÑñ' ]{3,80}" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Correo</label>
+                <input id="email" name="Correo" type="email" autocomplete="email" minlength="6" maxlength="120" required>
+              </div>
+
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="Teléfono" type="tel" autocomplete="tel" minlength="8" maxlength="16" pattern="[+0-9 ()-]{8,16}">
+              </div>
+
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="Mensaje" minlength="20" maxlength="1200" required></textarea>
+              </div>
+
+              <button class="button" type="submit">Enviar mensaje</button>
+              <p class="form-note">Los mensajes se enviarán a diversamentekatty@gmail.com. Tus datos se usarán solo para responder esta consulta.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        <span>Todos los derechos © 2026 Diversamente Katty</span>
+        <span>Sitio creado por <a href="https://pillageweb.cl" target="_blank" rel="noopener">pillageweb.cl</a></span>
+      </div>
+    </div>
+  </footer>
+  <a class="back-to-top-float" href="#inicio" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5.5 5.3 12.2l1.4 1.4 4.3-4.3V20h2V9.3l4.3 4.3 1.4-1.4L12 5.5Z" fill="currentColor"/>
+    </svg>
+  </a>
+  <a class="whatsapp-float" href="https://wa.me/56979850211?text=Hola%20Diversamente%20Katty%2C%20quiero%20agendar%20una%20evaluacion" target="_blank" rel="noopener" aria-label="Escribir a Diversamente Katty por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.02 3.2c-7.02 0-12.72 5.64-12.72 12.58 0 2.22.6 4.39 1.72 6.29L3.2 28.8l6.94-1.78a12.88 12.88 0 0 0 5.88 1.43c7.02 0 12.73-5.64 12.73-12.58S23.04 3.2 16.02 3.2Zm0 22.9c-1.86 0-3.67-.49-5.26-1.42l-.38-.22-4.12 1.06 1.1-3.98-.25-.41a10.18 10.18 0 0 1-1.56-5.35c0-5.65 4.7-10.24 10.47-10.24s10.47 4.59 10.47 10.24-4.7 10.32-10.47 10.32Zm5.74-7.68c-.31-.15-1.84-.9-2.12-1-.29-.1-.5-.15-.71.15-.21.31-.81 1-.99 1.2-.18.21-.36.23-.67.08-.31-.15-1.31-.48-2.5-1.53-.92-.81-1.54-1.81-1.72-2.12-.18-.31-.02-.48.14-.63.14-.14.31-.36.47-.54.15-.18.21-.31.31-.52.1-.21.05-.39-.03-.54-.08-.15-.71-1.69-.97-2.32-.25-.6-.52-.52-.71-.53h-.6c-.21 0-.54.08-.83.39-.29.31-1.09 1.06-1.09 2.58s1.12 2.99 1.27 3.2c.15.21 2.2 3.34 5.33 4.68.75.32 1.33.51 1.78.65.75.24 1.43.2 1.97.12.6-.09 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.36Z"/>
+    </svg>
+  </a>
+  <script>
+    (function () {
+      var form = document.getElementById("contactForm");
+      var errorBox = document.getElementById("formError");
+      var loadedAtInput = document.getElementById("formLoadedAt");
+      var header = document.getElementById("siteHeader");
+      var menuToggle = document.querySelector(".mobile-menu-toggle");
+      var menuClose = document.querySelector(".mobile-menu-close");
+      var loadedAt = Date.now();
+      var blockedTerms = [
+        "http://",
+        "https://",
+        "www.",
+        "[url",
+        "</a",
+        "viagra",
+        "casino",
+        "crypto",
+        "loan",
+        "forex",
+        "seo backlinks"
+      ];
+
+      loadedAtInput.value = new Date(loadedAt).toISOString();
+
+      function setMenu(open) {
+        header.classList.toggle("is-open", open);
+        menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+
+      menuToggle.addEventListener("click", function () {
+        setMenu(!header.classList.contains("is-open"));
+      });
+
+      menuClose.addEventListener("click", function () {
+        setMenu(false);
+      });
+
+      header.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setMenu(false);
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setMenu(false);
+        }
+      });
+
+      function showError(message) {
+        errorBox.textContent = message;
+        errorBox.classList.add("is-visible");
+      }
+
+      function clean(value) {
+        return value.replace(/\s+/g, " ").trim();
+      }
+
+      form.addEventListener("submit", function (event) {
+        var nombre = clean(document.getElementById("nombre").value);
+        var email = clean(document.getElementById("email").value);
+        var telefono = clean(document.getElementById("telefono").value);
+        var mensaje = clean(document.getElementById("mensaje").value);
+        var honey = form.querySelector("[name='_honey']").value;
+        var lowerMessage = mensaje.toLowerCase();
+        var elapsedSeconds = (Date.now() - loadedAt) / 1000;
+        var repeatedChars = /(.)\1{8,}/.test(mensaje);
+        var linkCount = (lowerMessage.match(/https?:\/\/|www\./g) || []).length;
+
+        errorBox.classList.remove("is-visible");
+
+        if (honey) {
+          event.preventDefault();
+          showError("No se pudo enviar el mensaje. Intenta nuevamente.");
+          return;
+        }
+
+        if (elapsedSeconds < 4) {
+          event.preventDefault();
+          showError("Espera unos segundos antes de enviar el formulario.");
+          return;
+        }
+
+        if (!/^[A-Za-zÀ-ÿÑñ' ]{3,80}$/.test(nombre)) {
+          event.preventDefault();
+          showError("Ingresa un nombre válido, sin números ni símbolos especiales.");
+          return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 120) {
+          event.preventDefault();
+          showError("Ingresa un correo válido.");
+          return;
+        }
+
+        if (telefono && !/^[+0-9 ()-]{8,16}$/.test(telefono)) {
+          event.preventDefault();
+          showError("Ingresa un teléfono válido o deja el campo en blanco.");
+          return;
+        }
+
+        if (mensaje.length < 20 || mensaje.length > 1200) {
+          event.preventDefault();
+          showError("El mensaje debe tener entre 20 y 1200 caracteres.");
+          return;
+        }
+
+        if (linkCount > 0 || repeatedChars || blockedTerms.some(function (term) { return lowerMessage.indexOf(term) !== -1; })) {
+          event.preventDefault();
+          showError("El mensaje contiene contenido no permitido. Escríbelo sin enlaces ni texto promocional.");
+          return;
+        }
+
+        document.getElementById("nombre").value = nombre;
+        document.getElementById("email").value = email;
+        document.getElementById("telefono").value = telefono;
+        document.getElementById("mensaje").value = mensaje;
+      });
+    })();
+  </script>
+</body>
+</html>
+
